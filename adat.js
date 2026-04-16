@@ -21,7 +21,7 @@ export const KEPESLISTA = [
     },
 
     {
-        src: "kepek/csárhkány.png",
+        src: "kepek/Csárhkány.png",
         cim: "Csárkány",
         leiras: "egy vad piros sárkány"    
     },
