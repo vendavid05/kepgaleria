@@ -9,23 +9,23 @@ export default class Nagykep {
         this.nagykepelem = nagykepelem;
 
         this.megjelenit();
+    }
+        megjelenit() {
+        this.nagykepelem.innerHTML = "";
+        
+        new KiemeltKep(this.#lista[this.#aktindex], this.nagykepelem);
 
         this.balgombELEM = document.querySelector(".balgomb");
         this.jobbgombELEM = document.querySelector(".jobbgomb");
 
-        this.balgombELEM.addEventListener("click",()=>{
+        this.balgombELEM.addEventListener("click", () => {
             this.#aktindex--;
             this.megjelenit();
-        })
+        });
 
-        this.jobbgombELEM.addEventListener("click",()=>{
-            this.#aktindex = this.#aktindex+1;
+        this.jobbgombELEM.addEventListener("click", () => {
+            this.#aktindex++;
             this.megjelenit();
-        })
-    }
-
-    megjelenit(){
-        this.nagykepelem.innerHTML = ""; 
-        new KiemeltKep(this.#lista[this.#aktindex], this.nagykepelem);
+        });
     }
 }
